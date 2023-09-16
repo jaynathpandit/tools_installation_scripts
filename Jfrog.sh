@@ -1,6 +1,7 @@
 sudo usermod -aG docker $USER
 docker pull docker.bintray.io/jfrog/artifactory-oss:latest
 sudo mkdir -p /jfrog/artifactory
+CD /jfrog/artifactory
 sudo chown -R 1030 /jfrog/
 docker run --name artifactory -d \
   -p 8081:8081 \
